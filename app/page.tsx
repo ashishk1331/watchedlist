@@ -2,18 +2,9 @@
 
 import Avvvatars from "avvvatars-react";
 import {
-    Cloud,
-    CreditCard,
-    Github,
-    Keyboard,
-    LifeBuoy,
     LogOut,
-    Mail,
-    MessageSquare,
     Plus,
-    PlusCircle,
-    Settings,
-    User,
+    User
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -84,7 +75,7 @@ export default function Home() {
 
     return (
         <main className="flex min-h-screen flex-col items-center gap-12 bg-primary">
-            <div className="w-full bg-sunset pb-32 pt-12 px-24 flex items-center justify-between">
+            <div className="w-full bg-sunset pb-32 pt-12 md:px-24 px-6 flex flex-col gap-6 md:flex-row md:gap-0 items-center justify-between">
                 <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
                     Watched List
                 </h1>
@@ -116,7 +107,7 @@ export default function Home() {
                     </DropdownMenu>
                 </div>
             </div>
-            <ul className="w-full py-12 px-24 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
+            <ul className="w-full py-12 md:px-24 px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
                 {
                    data.map(movie => <Post key={movie.id} data={movie} />)
                 }
