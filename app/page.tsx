@@ -118,7 +118,7 @@ export default function Home() {
             </div>
             <ul className="w-full py-12 px-24 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
                 {
-                   data.map(movie => <Post key={movie.id} data={...movie} />)
+                   data.map(movie => <Post key={movie.id} data={movie} />)
                 }
             </ul>
         </main>
